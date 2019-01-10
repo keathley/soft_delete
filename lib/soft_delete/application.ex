@@ -8,6 +8,7 @@ defmodule SoftDelete.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
+      {SoftDelete.Repo, []}
       # Starts a worker by calling: SoftDelete.Worker.start_link(arg)
       # {SoftDelete.Worker, arg},
     ]
